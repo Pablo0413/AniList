@@ -3,7 +3,7 @@
     <div class="content-box">
       <h1 class="content_title">Anime Search</h1>
       <h2 class="content_subtitle">Here we can try to search Naruto.. ;)</h2>
-      <form class="search" @click="submit">
+      <form class="search" @submit.prevent="submit">
         <IconVue name="search" size=20 />
         <input type="text" placeholder="Search..." v-model="query" />
     </form>
@@ -12,7 +12,6 @@
 </template>
 
 <script>
-// @ is an alias to /src
 import IconVue from '@/components/Icon.vue'
 import overlay from '@/components/Overlay.vue';
 
@@ -55,7 +54,6 @@ export default {
   padding: 50px;
   border-radius: 5px;
   .content_title {
-    // font-family: 'Unica One';
     font-size: 40px;
     margin-bottom: 30px;
   }
@@ -72,6 +70,7 @@ export default {
       border: 0;
       outline: 0;
       color: white;
+      padding: 0;
       width: 350px;
       background-color: transparent;
       font-size: 15px;

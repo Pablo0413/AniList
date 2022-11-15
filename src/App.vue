@@ -2,24 +2,10 @@
   <nav id="nav" class="navbar navbar-expand-md navbar-dark">
     <div class="container-fluid justify-content-between w-80">
       <router-link class="navbar-brand" to="/">AniList</router-link>
-
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#navbarContent"
-        aria-controls="navbarContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    </div>
-
     <div class="collapse navbar-collapse justify-content-evenly" id="navbarContent">
-      
+      <NavbarSearchVue />
     </div>
-
+    </div>
   </nav>
   <router-view/>
 </template>
@@ -43,8 +29,7 @@ export default {
   font-family: 'Open Sans', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: $text-color;
-  // color: #2c3e50;
+  color: #707070;
 }
 
 #nav {
@@ -54,7 +39,6 @@ export default {
 }
 
 .navbar-brand {
-  // font-family: ;
   font-size: 28px;
   padding: 0;
   padding-top: 2px;
@@ -70,10 +54,6 @@ export default {
   margin: auto;
 }
 
-.raw-text { 
-  white-space: pre-wrap;
-}
-
 .no-scrollbar {
     overflow-y: hidden;
 }
@@ -83,13 +63,12 @@ export default {
 }
 
 a {
-  color: $primary-color;
+  color: #876fff;
   text-decoration: none;
-  border-bottom: 1px solid transparent;
   transition-duration: 0.3s;
   :hover {
-    color: $primary-color;
-    border-bottom: 1px solid $primary-color;
+    background-color: #f9f9f9;
+    border-radius: 4px;
     transition-duration: 0.3s;
   }
 }
